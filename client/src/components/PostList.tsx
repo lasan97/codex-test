@@ -17,16 +17,16 @@ const PostList: React.FC = () => {
   }, [])
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
-      <h2 className="text-3xl font-bold mb-4">게시글 목록</h2>
-      <ul className="space-y-2">
+    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="text-4xl font-extrabold mb-6 text-gray-900 tracking-tight">게시글 목록</h2>
+      <ul className="space-y-4">
         {posts.map(post => (
           <li key={post.id}>
             <Link
               to={`/posts/${post.id}`}
-              className="block px-4 py-2 border rounded hover:bg-gray-100"
+              className="block px-6 py-4 bg-gray-50 rounded-lg shadow hover:bg-indigo-50 transition duration-300 ease-in-out border border-transparent hover:border-indigo-300"
             >
-              {post.title || '(제목 없음)'}
+              <h3 className="text-xl font-semibold text-indigo-700">{post.title || '(제목 없음)'}</h3>
             </Link>
           </li>
         ))}
