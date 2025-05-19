@@ -14,6 +14,25 @@ npm run dev
 ```
 브라우저에서 http://localhost:5173 에 접속하세요.
 
+## 변경 사항
+- React 컴포넌트를 JSX에서 TypeScript (TSX)로 변환 적용
+- Tailwind CSS를 이용한 스타일링 적용
+- App.tsx 및 main.tsx 포함 주요 진입점도 TS 및 Tailwind 적용
+
+## 주요 기능
+- `/` : 게시글 목록 조회
+- `/posts/:id` : 게시글 상세 조회
+- `/new` : 새 게시글 등록 (Markdown 지원)
+- `/edit/:id` : 게시글 수정
+
+## 사용된 기술 스택 및 라이브러리
+- React 18, React Router DOM
+- TypeScript
+- Tailwind CSS
+- React Markdown (remark-gfm)
+- Vite (개발서버)
+- FastAPI (백엔드)
+
 ## 서버 설정
 ```bash
 cd server
