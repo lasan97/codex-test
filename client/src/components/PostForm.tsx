@@ -49,31 +49,40 @@ const PostForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 flex flex-col space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-10 flex flex-col space-y-8"
+    >
       <div>
-        <label htmlFor="title" className="block text-gray-700 font-bold mb-2 text-lg">
+        <label
+          htmlFor="title"
+          className="block text-gray-800 font-extrabold mb-3 text-xl"
+        >
           제목
         </label>
         <input
           id="title"
           value={title}
           onChange={e => setTitle(e.target.value)}
-          className="appearance-none border border-gray-300 rounded-lg w-full p-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="appearance-none border border-indigo-300 rounded-2xl w-full p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-indigo-400"
           placeholder="제목을 입력하세요"
           required
         />
       </div>
 
       <div>
-        <label htmlFor="content" className="block text-gray-700 font-bold mb-2 text-lg">
+        <label
+          htmlFor="content"
+          className="block text-gray-800 font-extrabold mb-3 text-xl"
+        >
           내용
         </label>
         <textarea
           id="content"
           value={content}
           onChange={e => setContent(e.target.value)}
-          rows={12}
-          className="appearance-none border border-gray-300 rounded-lg w-full p-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+          rows={14}
+          className="appearance-none border border-indigo-300 rounded-2xl w-full p-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-indigo-400 resize-none"
           placeholder="내용을 입력하세요"
           required
         />
@@ -81,7 +90,7 @@ const PostForm: React.FC = () => {
 
       <button
         type="submit"
-        className="self-start bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-200"
+        className="self-start bg-gradient-to-r from-indigo-600 via-indigo-700 to-indigo-800 text-white font-extrabold px-10 py-4 rounded-2xl hover:from-indigo-700 hover:via-indigo-800 hover:to-indigo-900 transition duration-300"
       >
         {isEdit ? '수정하기' : '작성하기'}
       </button>
